@@ -199,7 +199,7 @@ async function loadPage() {
     let gameTime = formatedTime[4]
 
     liague.textContent = `${i}. ${dataList.games[i]["liague"]}`;
-    time.textContent = `${day} ${dayNum} ${gameTime.slice(0,5)}`;
+    time.textContent = `${dayNum} ${day} ${gameTime.slice(0,5)}`;
     first.textContent = dataList.games[i]["team_one"];
     draw.textContent = "draw";
     second.textContent = dataList.games[i]["team_two"];
