@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: var(--tg-theme-secondary-bg-color);
+  color: var(--tg-theme-text-color);
+}
+
+.container {
+  background-color: var(--tg-theme-secondary-bg-color);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 3em;
+  width: 100%;
+}
+
+#logo img {
+  height: 3em;
+  width: 4em;
+  margin: 5px 10px;
+}
+
+#jackpot {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+  margin-left: -8%;
+  padding: 0 10px;
+  font-weight: 500;
+  background-color: var(--tg-theme-link-color);
+  border-radius: 15px;
+  color: var(--tg-theme-button-text-color);
+}
+#jackpot:active {
+  background-color: var(--tg-theme-secondary-bg-color);
+  border: solid 2px var(--tg-theme-link-color);
+}
+
+#connect-button {
+  display: flex;
+  justify-content: flex-end;
+  margin: 5px 10px;
+}
+
+#connect-button div {
+  width: 100%;
+}
+
+#connect-button button {
+  height: 45px;
+  margin-top: 50px;
+  width: 100%;
+}
+
+#tgUser {
+  display: flex;
+  height: 45px;
+  margin: 5px 10px;
+  background-color: var(--tg-theme-button-color);
+  color: var(--tg-theme-button-text-color);
+  padding: 10px;
+  gap: 9px;
+  border-radius: 17px;
+  align-items: center;
+  font-weight: 600;
+}
+
+#tgUser p {
+  width: 100%;
+  text-align: center;
+}
+
+#ticket-div {
+  display: flex;
+  height: 45px;
+  margin: 5px 10px;
+  background-color: var(--tg-theme-button-color);
+  color: var(--tg-theme-button-text-color);
+  padding: 10px;
+  border-radius: 17px;
+  align-items: center;
+  font-weight: 600;
+  gap: 9px;
+}
+
+#ticket-div:active {
+  border: 3px solid var(--tg-theme-button-text-color);
+  display: flex;
+  height: 45px;
+  margin: 5px 10px;
+  background-color: var(--tg-theme-button-color);
+  padding: 10px;
+  border-radius: 17px;
+  align-items: center;
+  font-weight: 600;
+  gap: 9px;
+}
+
+#ticket-button {
+  border: none;
+  width: 100%;
+  background-color: var(--tg-theme-button-color);
+  color: var(--tg-theme-button-text-color);
+  font-size: medium;
+  font-weight: 600;
+  text-align: center;
+}
+
+#menu {
+  width: 70%;
+  height: 100%;
+  background-color: var(--tg-theme-secondary-bg-color);
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  justify-content: flex;
+  right: 0;
+  border-radius: 15px 0 0 15px;
+  border: 1px var(--tg-theme-bg-color) solid;
+  z-index: 1;
+}
+
+#terms {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  color: var(--tg-theme-hint-color);
+}
+
+#menu img {
+  height: 17px;
+}
+
+#menu-btn {
+  height: 2.5em;
+  width: 2.5em;
+  margin: 10px;
+  z-index: 2;
+  border: none;
+  background-color: var(--tg-theme-secondary-bg-color);
+  background-size: cover;
+}
+
+.content h3 {
+  margin-top: 20px;
+  text-align: center;
+  color: var(--tg-theme-text-color);
+  font-style: bold;
+}
+
+.content {
+  margin: 3%;
+}
+
+.caption {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: var(--tg-theme-bg-color);
+  border-radius: 7px;
+  font-weight: bold;
+}
+.caption div {
+  margin: 5px 10px;
+}
+
+.teams {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 7px;
+}
+
+.clicked {
+  background-color: var(--tg-theme-button-color) !important;
+  font-style: bold !important;
+  color: var(--tg-theme-button-text-color) !important;
+}
+
+.select-button {
+  width: 32%;
+  height: 50px;
+  background-color: var(--tg-theme-bg-color);
+  border-radius: 7px;
+  border: none;
+  font-size: 16px;
+  color: var(--tg-theme-text-color);
+}
+
+.teams button:active {
+  width: 32%;
+  height: 50px;
+  background-color: var(--tg-theme-link-color);
+  border-radius: 7px;
+  border: none;
+  font-size: 17px;
+  color: var(--tg-theme-button-text-color);
+}
+
+#ticket {
+  margin: 25px 3%;
+  background-color: var(--tg-theme-bg-color);
+  border-radius: 7px;
+}
+
+#ticket h3 {
+  text-align: center;
+  padding-top: 10px;
+}
+
+#selectedOptions {
+  padding-top: 5px;
+}
+
+#selectedOptions li {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  color: var(--tg-theme-text-color);
+}
+
+#selectedOptions div {
+  margin: 5px 10px;
+}
+
+.choose {
+  font-weight: bold;
+}
+
+.bottom {
+  margin: 30px 0 10px 0;
+  width: 100%;
+  text-align: center;
+  color: var(--tg-theme-hint-color);
+}
+
+.bottom img {
+  padding-top: 5px;
+  text-align: center;
+  color: var(--tg-theme-hint-color);
+}
+
+/* tonconnect */
+button[data-tc-connect-button="true"] {
+  background-color: red;
+}
+
+/* MY TICKETS */

@@ -1,0 +1,71 @@
+{
+  "gameWeek": "#1",
+  "games": {
+    "1": {
+      "liague": "🏴󠁧󠁢󠁥󠁮󠁧󠁿 Premier Liague",
+      "date": "1690832320",
+      "team_one": "Chelsea",
+      "team_two": "Arsenal"
+    },
+    "2": {
+      "liague": "🇪🇸 La Liga",
+      "date": "1690832320",
+      "team_one": "Real Madrid",
+      "team_two": "Atletico"
+    },
+    "3": {
+      "liague": "🇫🇷 Liague 1",
+      "date": "1690832320",
+      "team_one": "PSG",
+      "team_two": "Monaco"
+    },
+    "4": {
+      "liague": "🇩🇪 Bundest Liga",
+      "date": "1690832320",
+      "team_one": "Borussia",
+      "team_two": "Mainz"
+    },
+    "5": {
+      "liague": "🇪🇸 La Liga",
+      "date": "1690832320",
+      "team_one": "Barcelona",
+      "team_two": "Sevilla"
+    },
+    "6": {
+      "liague": "🇮🇹 Seria A",
+      "date": "1690832320",
+      "team_one": "Milan",
+      "team_two": "Inter"
+    },
+    "7": {
+      "liague": "🇪🇸 La Liga",
+      "date": "1690832320",
+      "team_one": "Betis",
+      "team_two": "Osasuna"
+    },
+    "8": {
+      "liague": "🇫🇷 Liague 1",
+      "date": "1690832320",
+      "team_one": "Nice",
+      "team_two": "Lille"
+    },
+    "9": {
+      "liague": "🇫🇷 Liague 1",
+      "date": "1690832320",
+      "team_one": "Marseille",
+      "team_two": "Lens"
+    },
+    "10": {
+      "liague": "🇪🇸 La Liga",
+      "date": "1690832320",
+      "team_one": "Girona",
+      "team_two": "Almeria"
+    },
+    "11": {
+      "liague": "🇮🇹 Seria A",
+      "date": "1690832320",
+      "team_one": "Napoli",
+      "team_two": "Verona"
+    }
+  }
+}

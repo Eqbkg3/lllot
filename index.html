@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./libs/tonconnect-ui.min.js"></script>
+    <script src="./libs/tonweb.min.js"></script>
+    <script src="./libs/ton-access.min.js"></script>
+    <script src="./libs/date-format.js"></script>
+    <title>lllot</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- #header -->
+      <div id="menu" style="display: none">
+        <div id="connect-button"></div>
+        <div id="tgUser" onclick="userName()">
+          <img src="files/telegramLogo.svg" alt="" height="12px" />
+        </div>
+        <div id="ticket-div">
+          <img src="files/tickets.svg" alt="" height="12px" />
+          <button id="ticket-button" onclick="myTickets()">My tickets</button>
+        </div>
+        <div id="terms" onclick="openLink()">
+          <img src="files/terms.svg" alt="terms" id="termsPic" /> Terms
+        </div>
+      </div>
+      <div class="header">
+        <div id="logo"></div>
+        <div id="jackpot"></div>
+        <button id="menu-btn" onclick="toggleMenu()"></button>
+      </div>
+      <!-- content -->
+      <div class="content">
+        <h3 id="gameWeek"></h3>
+        <ul class="item" id="item">
+          <!-- Games -->
+        </ul>
+      </div>
+      <div id="ticket" style="display: none">
+        <h3>Ticket</h3>
+        <ul id="selectedOptions">
+          <!-- Selected options -->
+        </ul>
+      </div>
+      <div class="bottom">
+        Based on TON
+        <img src="./files/TON.svg" height="18px" />
+      </div>
+      <script src="script.js"></script>
+      <script>
+        loadPage();
+      </script>
+    </div>
+  </body>
+</html>
