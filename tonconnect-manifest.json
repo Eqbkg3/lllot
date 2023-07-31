@@ -1,10 +1,7 @@
 {
-  "url": "https://bd35-62-205-156-48.ngrok-free.app",
+  "url": "https://footballlot.uno",
   "name": "Footballlot",
-  "iconUrl": "https://telegra.ph/file/2bb71657e531b337d167d.jpg",
+  "iconUrl": "https://footballlot.uno/logo.png",
   "termsOfUseUrl": "https://telegra.ph/Term-of-Use-07-27"
 }
 
-
-wleulhpyip22rkjac3bh7ffu2del5fyvvu3r6vlohvuwzrrx2cwfrrq
-sudo  ton-build/rldp-http-proxy/rldp-http-proxy -a 5.44.252.194:3333 -L '*' -C global-config.json -A wleulhpyip22rkjac3bh7ffu2del5fyvvu3r6vlohvuwzrrx2cwfrrq -d
