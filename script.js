@@ -11,14 +11,23 @@ let utils = TonWeb.utils;
 let tonweb;
 
 if (!tg.initData){
-    console.log('Not in telegram')
-} else { 
+    getTgPage();
+} else {
+    let loading = document.getElementsByClassName('ring')[0]
+    if (!tg.isExpanded){ loading.style.top = '30%';
+    } else { loading.style.top = '50%';    
+    }
     loadPage();
 }
 
 logoPic = `./files/${tg.colorScheme}_logo.svg`;
 menuPic = `./files/${tg.colorScheme}_menu.svg`;
 menuClose = `./files/${tg.colorScheme}_Xmark.svg`;
+
+function getTgPage(){
+    let teleDiv = document.getElementsByClassName('notTele');
+
+}
 
 async function getTonweb() {
   const endpoint = await TonAccess.getHttpEndpoint();
