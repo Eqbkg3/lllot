@@ -25,8 +25,51 @@ menuPic = `./files/${tg.colorScheme}_menu.svg`;
 menuClose = `./files/${tg.colorScheme}_Xmark.svg`;
 
 function getTgPage(){
-    let teleDiv = document.getElementsByClassName('notTele');
+    let teleDiv = document.getElementsByClassName('notTele')[0];
+    let mainText = document.createElement('h1');
+    mainText.innerText = "Footballlot only in Telegram ";
+    teleDiv.appendChild(mainText);
 
+    const tgBotDiv = document.createElement('div');
+    const tgBotIcon = document.createElement('img');
+    tgBotIcon.setAttribute('src', './files/botIcon.svg');
+    tgBotIcon.style.height = '26px';
+    const tgBot = document.createElement('a');
+    tgBot.innerText = 'Telegram bot';
+    tgBot.setAttribute('href', 'https://t.me/footballlotbot');
+    tgBotDiv.appendChild(tgBot);
+    tgBotDiv.appendChild(tgBotIcon)
+    
+    const tgChannelDiv = document.createElement('div');
+    const tgChannelIcon = document.createElement('img');
+    tgChannelIcon.setAttribute('src', './files/telegramLogo.svg');
+    tgChannelIcon.style.height = '20px';
+    const tgChannel = document.createElement('a');
+    tgChannel.innerText = 'Telegram channel';
+    tgChannel.setAttribute('href', 'https://t.me/footballlot');
+    tgChannelDiv.appendChild(tgChannel);
+    tgChannelDiv.appendChild(tgChannelIcon);
+    
+
+    teleDiv.appendChild(tgBotDiv);
+    teleDiv.appendChild(tgChannelDiv);
+
+
+    const bottom = document.createElement('span');
+    bottom.setAttribute('class', 'bottomWeb');
+    let basedTon = document.createElement('p');
+    basedTon.innerText = 'Based on TON';
+    let bottomImg = document.createElement('img');
+    bottomImg.setAttribute('src', './files/TON.svg');
+    bottomImg.style.height = '15px';
+    bottom.append(basedTon);
+    bottom.append(bottomImg);
+    teleDiv.append(bottom);
+
+
+    const load = document.getElementsByClassName('ring')[0];
+    load.style.display = 'none';
+    teleDiv.style.display = 'flex';
 }
 
 async function getTonweb() {
