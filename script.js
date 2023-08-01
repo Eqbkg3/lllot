@@ -223,7 +223,7 @@ async function loadPage() {
   let jackimg = document.createElement("img");
   jackimg.setAttribute("src", "./files/jackpot.svg");
   jackimg.style.height = "15px";
-  jackPrice.innerText = "Jackpot 21" + ~~balance;
+  jackPrice.innerText = "Jackpot " + ~~balance;
   jackpot.appendChild(jackPrice);
   jackpot.appendChild(jackimg);
 
