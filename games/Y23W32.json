@@ -1,0 +1,71 @@
+{
+  "gameWeek": "#1",
+  "games": {
+    "1": {
+      "liague": "🏴󠁧󠁢󠁥󠁮󠁧󠁿 Premier Liague",
+      "date": "",
+      "team_one": "Burnley",
+      "team_two": "Manchester City"
+    },
+    "2": {
+      "liague": "🏴󠁧󠁢󠁥󠁮󠁧󠁿 Premier Liague",
+      "date": "",
+      "team_one": "Arsenal",
+      "team_two": "Nottingham"
+    },
+    "3": {
+      "liague": "🏴󠁧󠁢󠁥󠁮󠁧󠁿 Premier Liague",
+      "date": "",
+      "team_one": "Everton",
+      "team_two": "Fulham"
+    },
+    "4": {
+      "liague": "🏴󠁧󠁢󠁥󠁮󠁧󠁿 Premier Liague",
+      "date": "",
+      "team_one": "Chelsea",
+      "team_two": "Liverpool"
+    },
+    "5": {
+      "liague": "🇪🇸 La Liga",
+      "date": "",
+      "team_one": "Sevilla",
+      "team_two": "Valencia"
+    },
+    "6": {
+      "liague": "🇪🇸 La Liga",
+      "date": "",
+      "team_one": "Ath Bilbao",
+      "team_two": "Real Madrid"
+    },
+    "7": {
+      "liague": "🇪🇸 La Liga",
+      "date": "",
+      "team_one": "Getafe",
+      "team_two": "Barcelona"
+    },
+    "8": {
+      "liague": "🇫🇷 Ligue 1",
+      "date": "",
+      "team_one": "Clermont",
+      "team_two": "Monaco"
+    },
+    "9": {
+      "liague": "🇫🇷 Ligue 1",
+      "date": "",
+      "team_one": "Marseille",
+      "team_two": "Lens"
+    },
+    "10": {
+      "liague": "🇫🇷 Ligue 1",
+      "date": "",
+      "team_one": "PSG",
+      "team_two": "Lorient"
+    },
+    "11": {
+      "liague": "🇫🇷 Ligue 1",
+      "date": "",
+      "team_one": "Nice",
+      "team_two": "Lille"
+    }
+  }
+}

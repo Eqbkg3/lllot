@@ -1,7 +1,20 @@
+Date.prototype.getWeek = function() {
+  var onejan = new Date(this.getFullYear(),0,1);
+  var today = new Date(this.getFullYear(),this.getMonth(),this.getDate());
+  var dayOfYear = ((today - onejan + 86400000)/86400000);
+  return Math.ceil(dayOfYear/7)
+};
+
 const tg = window.Telegram.WebApp;
 let cell = new TonWeb.boc.Cell();
 let utils = TonWeb.utils;
 let tonweb;
+
+if (!tg.initData){
+    console.log('Not in telegram')
+} else { 
+    loadPage();
+}
 
 logoPic = `./files/${tg.colorScheme}_logo.svg`;
 menuPic = `./files/${tg.colorScheme}_menu.svg`;
@@ -142,7 +155,9 @@ async function transfer() {
 }
 
 async function loadPage() {
-  const dataList = await fetch("./data.json").then((response) =>
+    const date = new Date();
+    const year = date.getFullYear();
+  const dataList = await fetch(`./games/Y${year.toString().slice(-2)}W${date.getWeek()}.json`).then((response) =>
     response.json()
   );
   const tonweb = await getTonweb();
@@ -228,6 +243,12 @@ async function loadPage() {
   }
   const menu_btn = document.getElementById("menu-btn");
   menu_btn.style.backgroundImage = `url("${menuPic}")`;
+    const loading = document.getElementsByClassName("ring")[0]
+    loading.style.display = 'none';
+    const container = document.getElementsByClassName("container")[0]
+    container.style.display = 'block';
+    loading.append();
+    container.append();
 }
 
 function toggleMenu() {
