@@ -80,7 +80,7 @@ async function getTonweb() {
 
 const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
   manifestUrl:
-    "https://eqbkg3.github.io/lllot/tonconnect-manifest.json",
+    "https://footballlot.uno/tonconnect-manifest.json",
   buttonRootId: "connect-button",
   uiPreferences: {
     theme: `${tg.colorScheme.toUpperCase()}`,
