@@ -10,139 +10,130 @@ body {
 /* IF NOT TELEGRAM*/
 
 .notTele {
-    position: fixed;
-    top:25%;
-    width: 80%;
-    height: 75%;
-    align-items: center;
-    margin-left:10%;
-    flex-direction: column;
+  position: fixed;
+  top: 25%;
+  width: 80%;
+  height: 75%;
+  align-items: center;
+  margin-left: 10%;
+  flex-direction: column;
 }
 
 .notTele h1 {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 50px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 50px;
 }
 
 .notTele div {
-    margin:5px;
-    padding: 10px;
-    height: 50px;
-    width: 80%;
-    max-width: 300px;
-    display: flex;
-    background-color: #50A7EA;
-    align-items: center;
-    gap:8px;
-    border-radius: 15px;
-    font-size: 16px;
+  margin: 5px;
+  padding: 10px;
+  height: 50px;
+  width: 80%;
+  max-width: 300px;
+  display: flex;
+  background-color: #50a7ea;
+  align-items: center;
+  gap: 8px;
+  border-radius: 15px;
+  font-size: 16px;
 }
 
 .notTele a {
-    width: 100%;
-    text-align: center;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 20px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .notTele img {
-    padding-right: 10px;
+  padding-right: 10px;
 }
 
 .notTele span {
-    position: absolute;
-    display: flex;
-    width: 135px;
-    bottom: 5px;
-    gap: 5px;
-    align-items: center;
+  position: absolute;
+  display: flex;
+  width: 135px;
+  bottom: 5px;
+  gap: 5px;
+  align-items: center;
 }
 .notTele p {
-    color: #999999;
+  color: #999999;
 }
 
 /* LOADING... */
 
-.ring
-{
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  width:150px;
-  height:150px;
-  background:transparent;
-  border:3px solid var(--tg-theme-secondary-bg-color);
-  border-radius:50%;
-  text-align:center;
-  line-height:150px;
-  font-family:sans-serif;
-  font-size:20px;
+.ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  background: transparent;
+  border: 3px solid var(--tg-theme-secondary-bg-color);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 150px;
+  font-family: sans-serif;
+  font-size: 20px;
   color: var(--tg-theme-link-color);
-  letter-spacing:4px;
-  box-shadow:0 0 20px rgba(0,0,0,.5);
+  letter-spacing: 4px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
-.ring:before
-{
-  content:'';
-  position:absolute;
-  top:-3px;
-  left:-3px;
-  width:100%;
-  height:100%;
-  border:3px solid transparent;
-  border-top:3px solid var(--tg-theme-link-color);
-  border-right:3px solid var(--tg-theme-link-color);
-  border-radius:50%;
-  animation:animateC 2s linear infinite;
+.ring:before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 100%;
+  height: 100%;
+  border: 3px solid transparent;
+  border-top: 3px solid var(--tg-theme-link-color);
+  border-right: 3px solid var(--tg-theme-link-color);
+  border-radius: 50%;
+  animation: animateC 2s linear infinite;
 }
 .ring span {
-  display:block;
-  position:absolute;
-  top:calc(50% - 2px);
-  left:50%;
-  width:50%;
-  height:4px;
-  background:transparent;
-  transform-origin:left;
-  animation:animate 2s linear infinite;
+  display: block;
+  position: absolute;
+  top: calc(50% - 2px);
+  left: 50%;
+  width: 50%;
+  height: 4px;
+  background: transparent;
+  transform-origin: left;
+  animation: animate 2s linear infinite;
 }
-span:before
-{
-  content:'';
-  position:absolute;
-  width:16px;
-  height:16px;
-  border-radius:50%;
-  background:var(--tg-theme-link-color);
-  top:-6px;
-  right:-8px;
-  box-shadow:0 0 20px var(--tg-theme-link-color);
+span:before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--tg-theme-link-color);
+  top: -6px;
+  right: -8px;
+  box-shadow: 0 0 20px var(--tg-theme-link-color);
 }
-@keyframes animateC
-{
-  0%
-  {
-    transform:rotate(0deg);
+@keyframes animateC {
+  0% {
+    transform: rotate(0deg);
   }
-  100%
-  {
-    transform:rotate(360deg);
+  100% {
+    transform: rotate(360deg);
   }
 }
-@keyframes animate
-{
-  0%
-  {
-    transform:rotate(45deg);
+@keyframes animate {
+  0% {
+    transform: rotate(45deg);
   }
-  100%
-  {
-    transform:rotate(405deg);
+  100% {
+    transform: rotate(405deg);
   }
 }
 
@@ -326,7 +317,17 @@ span:before
 }
 
 .select-button {
-  width: 32%;
+  width: 38%;
+  height: 50px;
+  background-color: var(--tg-theme-bg-color);
+  border-radius: 7px;
+  border: none;
+  font-size: 16px;
+  color: var(--tg-theme-text-color);
+  padding: 5px;
+}
+.select-button-draw {
+  width: 21%;
   height: 50px;
   background-color: var(--tg-theme-bg-color);
   border-radius: 7px;
@@ -335,8 +336,29 @@ span:before
   color: var(--tg-theme-text-color);
 }
 
-.teams button:active {
-  width: 32%;
+.buttonDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.buttonDiv img {
+  height: 30px;
+}
+
+.select-button:active {
+  width: 38%;
+  height: 50px;
+  background-color: var(--tg-theme-link-color);
+  border-radius: 7px;
+  border: none;
+  font-size: 17px;
+  color: var(--tg-theme-button-text-color);
+}
+
+.select-button-draw:active {
+  width: 21%;
   height: 50px;
   background-color: var(--tg-theme-link-color);
   border-radius: 7px;

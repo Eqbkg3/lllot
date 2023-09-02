@@ -1,8 +1,8 @@
-Date.prototype.getWeek = function() {
-  var onejan = new Date(this.getFullYear(),0,1);
-  var today = new Date(this.getFullYear(),this.getMonth(),this.getDate());
-  var dayOfYear = ((today - onejan + 86400000)/86400000);
-  return Math.ceil(dayOfYear/7)
+Date.prototype.getWeek = function () {
+  var onejan = new Date(this.getFullYear(), 0, 1);
+  var today = new Date(this.getFullYear(), this.getMonth(), this.getDate());
+  var dayOfYear = (today - onejan + 86400000) / 86400000;
+  return Math.ceil(dayOfYear / 7);
 };
 
 const tg = window.Telegram.WebApp;
@@ -10,66 +10,65 @@ let cell = new TonWeb.boc.Cell();
 let utils = TonWeb.utils;
 let tonweb;
 
-if (!tg.initData){
-    getTgPage();
+if (!tg.initData) {
+  getTgPage();
 } else {
-    let loading = document.getElementsByClassName('ring')[0]
-    if (!tg.isExpanded){ loading.style.top = '30%';
-    } else { loading.style.top = '50%';    
-    }
-    loadPage();
+  let loading = document.getElementsByClassName("ring")[0];
+  if (!tg.isExpanded) {
+    loading.style.top = "30%";
+  } else {
+    loading.style.top = "50%";
+  }
+  loadPage();
 }
 
 logoPic = `./files/${tg.colorScheme}_logo.svg`;
 menuPic = `./files/${tg.colorScheme}_menu.svg`;
 menuClose = `./files/${tg.colorScheme}_Xmark.svg`;
 
-function getTgPage(){
-    let teleDiv = document.getElementsByClassName('notTele')[0];
-    let mainText = document.createElement('h1');
-    mainText.innerText = "Footballlot only in Telegram ";
-    teleDiv.appendChild(mainText);
+function getTgPage() {
+  let teleDiv = document.getElementsByClassName("notTele")[0];
+  let mainText = document.createElement("h1");
+  mainText.innerText = "Footballlot only in Telegram ";
+  teleDiv.appendChild(mainText);
 
-    const tgBotDiv = document.createElement('div');
-    const tgBotIcon = document.createElement('img');
-    tgBotIcon.setAttribute('src', './files/botIcon.svg');
-    tgBotIcon.style.height = '26px';
-    const tgBot = document.createElement('a');
-    tgBot.innerText = 'Telegram bot';
-    tgBot.setAttribute('href', 'https://t.me/footballlotbot');
-    tgBotDiv.appendChild(tgBot);
-    tgBotDiv.appendChild(tgBotIcon)
-    
-    const tgChannelDiv = document.createElement('div');
-    const tgChannelIcon = document.createElement('img');
-    tgChannelIcon.setAttribute('src', './files/telegramLogo.svg');
-    tgChannelIcon.style.height = '20px';
-    const tgChannel = document.createElement('a');
-    tgChannel.innerText = 'Telegram channel';
-    tgChannel.setAttribute('href', 'https://t.me/footballlot');
-    tgChannelDiv.appendChild(tgChannel);
-    tgChannelDiv.appendChild(tgChannelIcon);
-    
+  const tgBotDiv = document.createElement("div");
+  const tgBotIcon = document.createElement("img");
+  tgBotIcon.setAttribute("src", "./files/botIcon.svg");
+  tgBotIcon.style.height = "26px";
+  const tgBot = document.createElement("a");
+  tgBot.innerText = "Telegram bot";
+  tgBot.setAttribute("href", "https://t.me/footballlotbot");
+  tgBotDiv.appendChild(tgBot);
+  tgBotDiv.appendChild(tgBotIcon);
 
-    teleDiv.appendChild(tgBotDiv);
-    teleDiv.appendChild(tgChannelDiv);
+  const tgChannelDiv = document.createElement("div");
+  const tgChannelIcon = document.createElement("img");
+  tgChannelIcon.setAttribute("src", "./files/telegramLogo.svg");
+  tgChannelIcon.style.height = "20px";
+  const tgChannel = document.createElement("a");
+  tgChannel.innerText = "Telegram channel";
+  tgChannel.setAttribute("href", "https://t.me/footballlot");
+  tgChannelDiv.appendChild(tgChannel);
+  tgChannelDiv.appendChild(tgChannelIcon);
 
+  teleDiv.appendChild(tgBotDiv);
+  teleDiv.appendChild(tgChannelDiv);
 
-    const bottom = document.createElement('span');
-    bottom.setAttribute('class', 'bottomWeb');
-    let basedTon = document.createElement('p');
-    basedTon.innerText = 'Based on TON';
-    let bottomImg = document.createElement('img');
-    bottomImg.setAttribute('src', './files/TON.svg');
-    bottomImg.style.height = '15px';
-    bottom.append(basedTon);
-    bottom.append(bottomImg);
-    teleDiv.append(bottom);
+  const bottom = document.createElement("span");
+  bottom.setAttribute("class", "bottomWeb");
+  let basedTon = document.createElement("p");
+  basedTon.innerText = "Based on TON";
+  let bottomImg = document.createElement("img");
+  bottomImg.setAttribute("src", "./files/TON.svg");
+  bottomImg.style.height = "15px";
+  bottom.append(basedTon);
+  bottom.append(bottomImg);
+  teleDiv.append(bottom);
 
-
-    const load = document.getElementsByClassName('ring')[0];
-    load.style.display = 'none';
-    teleDiv.style.display = 'flex';
+  const load = document.getElementsByClassName("ring")[0];
+  load.style.display = "none";
+  teleDiv.style.display = "flex";
 }
 
 async function getTonweb() {
@@ -79,8 +78,7 @@ async function getTonweb() {
 }
 
 const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
-  manifestUrl:
-    "https://footballlot.uno/tonconnect-manifest.json",
+  manifestUrl: "https://footballlot.uno/tonconnect-manifest.json",
   buttonRootId: "connect-button",
   uiPreferences: {
     theme: `${tg.colorScheme.toUpperCase()}`,
@@ -207,17 +205,17 @@ async function transfer() {
 }
 
 async function loadPage() {
-    const date = new Date();
-    const year = date.getFullYear();
-  const dataList = await fetch(`./games/Y${year.toString().slice(-2)}W${date.getWeek()}.json`).then((response) =>
-    response.json()
-  );
+  const date = new Date();
+  const year = date.getFullYear();
+  const dataList = await fetch(
+    `./games/Y${year.toString().slice(-2)}W${date.getWeek()}.json`
+  ).then((response) => response.json());
   const tonweb = await getTonweb();
   let balance = await tonweb.getBalance(
     "0:4131288bfa8a970befff83ebbb9ad2c5a49d25c2420da1086b696da228fbf8bb"
   );
-  balance = utils.fromNano(`${balance}`);
-  balance = balance / 2;
+  balance = utils.fromNano(`100${balance}`);
+  // balance = balance / 2;
   const jackpot = document.getElementById("jackpot");
   const jackPrice = document.createElement("h3");
   let jackimg = document.createElement("img");
@@ -254,22 +252,40 @@ async function loadPage() {
 
     first.classList.add("select-button");
     first.setAttribute("onclick", "makeTicket(this)");
-    draw.classList.add("select-button");
+    draw.classList.add("select-button-draw");
     draw.setAttribute("onclick", "makeTicket(this)");
     second.classList.add("select-button");
     second.setAttribute("onclick", "makeTicket(this)");
 
     const unix_time = dataList.games[i]["date"];
-    const formatedTime = new Date(unix_time * 1000).toString().split(' ');
-    let day = formatedTime[0]
-    let dayNum = formatedTime[2]
-    let gameTime = formatedTime[4]
+    const formatedTime = new Date(unix_time * 1000).toString().split(" ");
+    let day = formatedTime[0];
+    let dayNum = formatedTime[2];
+    let gameTime = formatedTime[4];
 
     liague.textContent = `${i}. ${dataList.games[i]["liague"]}`;
-    time.textContent = `${dayNum} ${day} ${gameTime.slice(0,5)}`;
-    first.textContent = dataList.games[i]["team_one"];
+    time.textContent = `${dayNum} ${day} ${gameTime.slice(0, 5)}`;
+
+    buttnDivFirst = document.createElement("div");
+    buttnDivFirst.classList.add("buttonDiv");
+    buttnDivSecond = document.createElement("div");
+    buttnDivSecond.classList.add("buttonDiv");
+    imgHome = document.createElement("img");
+    imgAway = document.createElement("img");
+    pHome = document.createElement("p");
+    pAway = document.createElement("p");
+
+    imgHome.setAttribute("src", `${dataList.games[i]["pic_home"]}`);
+    imgAway.setAttribute("src", `${dataList.games[i]["pic_away"]}`);
+    pHome.textContent = dataList.games[i]["team_one"];
+    pAway.textContent = dataList.games[i]["team_two"];
+
+    buttnDivFirst.append(pHome, imgHome);
+    buttnDivSecond.append(imgAway, pAway);
+
+    first.append(buttnDivFirst);
     draw.textContent = "draw";
-    second.textContent = dataList.games[i]["team_two"];
+    second.append(buttnDivSecond);
 
     caption.appendChild(liague);
     caption.appendChild(time);
@@ -281,7 +297,10 @@ async function loadPage() {
   }
   const tgUser = document.getElementById("tgUser");
   const userName = document.createElement("p");
-  if (tg.initDataUnsafe.user.last_name == "none") {
+  if (!tg.initData) {
+    userName.textContent = "full_name";
+    tgUser.appendChild(userName);
+  } else if (tg.initDataUnsafe.user.last_name == "none") {
     const full_name = tg.initDataUnsafe.user.last_name;
     userName.textContent = full_name;
     tgUser.appendChild(userName);
@@ -295,12 +314,12 @@ async function loadPage() {
   }
   const menu_btn = document.getElementById("menu-btn");
   menu_btn.style.backgroundImage = `url("${menuPic}")`;
-    const loading = document.getElementsByClassName("ring")[0]
-    loading.style.display = 'none';
-    const container = document.getElementsByClassName("container")[0]
-    container.style.display = 'block';
-    loading.append();
-    container.append();
+  const loading = document.getElementsByClassName("ring")[0];
+  loading.style.display = "none";
+  const container = document.getElementsByClassName("container")[0];
+  container.style.display = "block";
+  loading.append();
+  container.append();
 }
 
 function toggleMenu() {
