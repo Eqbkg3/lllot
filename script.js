@@ -214,14 +214,14 @@ async function loadPage() {
   let balance = await tonweb.getBalance(
     "0:4131288bfa8a970befff83ebbb9ad2c5a49d25c2420da1086b696da228fbf8bb"
   );
-  balance = utils.fromNano(`100${balance}`);
-  // balance = balance / 2;
+  balance = utils.fromNano(`${balance}`);
+  balance = balance / 2;
   const jackpot = document.getElementById("jackpot");
   const jackPrice = document.createElement("h3");
   let jackimg = document.createElement("img");
   jackimg.setAttribute("src", "./files/jackpot.svg");
   jackimg.style.height = "15px";
-  jackPrice.innerText = "Jackpot " + ~~balance;
+  jackPrice.innerText = "Jackpot 100" + ~~balance;
   jackpot.appendChild(jackPrice);
   jackpot.appendChild(jackimg);
 
