@@ -139,23 +139,19 @@ async function getComment() {
     .getElementById("selectedOptions")
     .querySelectorAll("li");
   for (let i = 0; i < text.length; i++) {
-    let first = text[i].innerText
-      .split("\n")[0]
-      .split(".")[1]
-      .split("-")[0]
-      .replace(" ", "");
+    let first = text[i].innerText.split("\n")[0].split(".")[1].split("-")[0];
     let second = text[i].innerText
       .split("\n")[0]
       .split(".")[1]
       .split("-")[1]
       .replace(" ", "");
     let choose = text[i].innerText.split("\n")[1];
-    if (`${choose} ` === `${first}`) {
+    if (`${choose} ` == `${first}`) {
       payl = payl + "1";
-    } else if (choose === `${second}`) {
+    } else if (choose == `${second}`) {
       payl = payl + "2";
-    } else if (choose === "draw") {
-      payl = payl + "x";
+    } else if (choose == "draw") {
+      payl = payl + "0";
     }
   }
   return payl;
